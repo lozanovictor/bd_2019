@@ -65,11 +65,54 @@ CREATE TABLE EXAME (
   PRIMARY KEY (cod_procedimento)
   FOREIGN KEY (CRBM) FROM BIOMEDICO (id_Profissional))
   
-Equipamento = (id_equipamento, nome)
-Amostra = (cod_procedimento *ce*, cod_amostra, tipo)
-Gene = (id_bioinformata *ce*, sequência)
-Doenças = (cod_amostra *ce*, id_bioinformata *ce*, nome, CID)
-Tratamentos = (nome, id_tratamento)
-Medico_exame = (CBM *ce*, cod_procedimento *ce*)
-Paciente_tratamento = (id_paciente *ce*, id_tratamento *ce*, descrição)
-Exame_equipamento = (cod_procedimento *ce*, id_equipamento *ce*)
+CREATE TABLE EQUIPAMENTO (
+  id_equipamento INTEGER NOT NULL,
+  nome VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_equipamento))
+  
+CREATE TABLE AMOSTRA (
+  cod_procedimento INTEGER NOT NULL,
+  cod_amostra INTEGER NOT NULL,
+  tipo VARCHAR (50) NOT NULL,
+  PRIMARY KEY (cod_amostra),
+  FOREIGN KEY (cod_procedimento) FROM EXAME (cod_procedimento))
+  
+CREATE TABLE GENE (
+  id_bioinformata INTEGER NOT NULL,
+  sequência LONGTEXT NOT NULL,
+  nome_gene VARCHAR(100) NOT NULL,
+  FOREIGN KEY (id_bioinformata) FROM BIOINFORMATA (id_bioinformata))
+  
+CREATE TABLE DOENCA (
+  cod_amostra INTEGER NOT NULL,
+  id_bioinformata INTEGER NOT NULL,
+  nome VARCHAR (100),
+  CID INTEGER NOT NULL,
+  PRIMARY KEY (CID),
+  FOREIGN KEY (cod_amostra) FROM AMOSTRA (cod_amostra),
+  FOREIGN KEY (id_bioinformata) FROM BIOINFORMATA (id_bioinformata))
+  
+CREATE TABLE TRATAMENTO (
+  nome VARCHAR(50),
+  id_tratamento INTEGER NOT NULL,
+  tratamento VARCHAR(500),
+  PRIMARY KEY (id_tratamento))
+  
+CREATE TABLE MEDICO_EXAME (
+  CRM INTEGER NOT NULL,
+  cod_procedimento INTEGER NOT NULL,
+  FOREIGN KEY (CRM) FROM MEDICO (CRM),
+  FOREIGN KEY (cod_procedimento) FROM EXAME (cod_procedimento))
+
+CREATE TABLE PACIENTE_TRATAMENTO (
+  id_paciente INTEGER NOT NULL,
+  id_tratamento INTEGER NOT NULL,
+  descrição VARCHAR(400) NOT NULL,
+  FOREIGN KEY (id_paciente) FROM PACIENTE (id_paciente),
+  FOREIGN KEY (id_tratamento) FROM TRATAMENTO (id_tratamento))
+  
+CREATE TABLE EXAME_EQUIPAMENTO (
+  cod_procedimento INTEGER NOT NULL,
+  id_equipamento INTEGER NOT NULL,
+  FOREIGN KEY (cod_procedimento) FROM EXAME (cod_procedimento)
+  FOREIGN KEY (id_equipamento) FROM EQUIPAMENTO (id_equipamento))
