@@ -70,7 +70,7 @@ CREATE TABLE EXAME (
   data_exame TIMESTAMP,
   cod_procedimento INTEGER NOT NULL,
   tipo VARCHAR(100) NOT NULL,
-  PRIMARY KEY (cod_procedimento)
+  PRIMARY KEY (cod_procedimento),
   FOREIGN KEY (CRBM) REFERENCES BIOMEDICO (id_Profissional));
   
 CREATE SEQUENCE cod_procedimento START WITH 1 INCREMENT BY 1;
