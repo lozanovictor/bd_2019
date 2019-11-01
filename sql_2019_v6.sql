@@ -71,7 +71,9 @@ CREATE TABLE EXAME (
   cod_procedimento INTEGER NOT NULL,
   tipo VARCHAR(100) NOT NULL,
   PRIMARY KEY (cod_procedimento),
-  FOREIGN KEY (CRBM) REFERENCES BIOMEDICO (id_Profissional));
+  FOREIGN KEY (CRBM) REFERENCES BIOMEDICO (id_Profissional),
+  FOREIGN KEY (id_paciente) REFERENCES PACIENTE (id_paciente)
+  FOREIGN KEY (id_secretaria) REFERENCES SECRETARIA (id_secretaria));
   
 CREATE SEQUENCE cod_procedimento START WITH 1 INCREMENT BY 1;
   
