@@ -37,29 +37,29 @@ CREATE SEQUENCE id_paciente START WITH 1 INCREMENT BY 1;
   
 
 CREATE TABLE SECRETARIA (
-  id_profissional INTEGER NOT NULL,
+  id_profissional INTEGER NOT NULL UNIQUE,
   id_secretaria INTEGER NOT NULL,
-  FOREIGN KEY (id_profissional) REFERENCES PROFISIONAL (id_Profissional));
+  FOREIGN KEY (id_profissional) REFERENCES PROFISSIONAL (id_profissional));
   
 CREATE SEQUENCE id_secretaria START WITH 1 INCREMENT BY 1;
   
   
 CREATE TABLE MEDICO (
-  id_profissional INTEGER NOT NULL,
+  id_profissional INTEGER NOT NULL UNIQUE,
   CBM INTEGER NOT NULL,
-  FOREIGN KEY (id_profissional) REFERENCES PROFISIONAL (id_Profissional));
+  FOREIGN KEY (id_profissional) REFERENCES PROFISSIONAL (id_profissional));
   
   
 CREATE TABLE BIOMEDICO (
   id_profissional INTEGER NOT NULL,
   CRBM INTEGER NOT NULL,
-  FOREIGN KEY (id_profissional) REFERENCES PROFISIONAL (id_Profissional));
+  FOREIGN KEY (id_profissional) REFERENCES PROFISSIONAL (id_profissional));
   
   
 CREATE TABLE BIOINFORMATA (
   id_profissional INTEGER NOT NULL,
   id_bioinformata INTEGER NOT NULL,
-  FOREIGN KEY (id_profissional) REFERENCES PROFISIONAL (id_Profissional));
+  FOREIGN KEY (id_profissional) REFERENCES PROFISSIONAL (id_profissional));
   
 CREATE SEQUENCE id_bioinformata START WITH 1 INCREMENT BY 1;
   
@@ -72,7 +72,7 @@ CREATE TABLE EXAME (
   tipo VARCHAR(100) NOT NULL,
   PRIMARY KEY (cod_procedimento),
   FOREIGN KEY (CRBM) REFERENCES BIOMEDICO (id_Profissional),
-  FOREIGN KEY (id_paciente) REFERENCES PACIENTE (id_paciente)
+  FOREIGN KEY (id_paciente) REFERENCES PACIENTE (id_paciente),
   FOREIGN KEY (id_secretaria) REFERENCES SECRETARIA (id_secretaria));
   
 CREATE SEQUENCE cod_procedimento START WITH 1 INCREMENT BY 1;
