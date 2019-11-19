@@ -1,9 +1,45 @@
 *********** 20 inserts ************
 
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
-VALUES (NEXTVAL(id_profissional) , , , , , , , , , , , , );
-
-
+VALUES (NEXTVAL(id_profissional) ,Joao da Silva ,M ,39949601002 ,292864462 , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,Ronaldo Santos ,M ,13487614073 ,190099938 , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,Amanda Ferreira ,F ,44467118063 ,488422218 , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,Marcelo Lima Bastos ,F ,64823938020 ,282207661 , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,Pedro Ferraz ,M ,46244492072 ,164549638 , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,85513726025 ,131847764 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,31249259045 ,106758032 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,31132404096 ,310294964 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,17684187058 ,375036131 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,93117283064 ,193833578 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,42843718007 ,136234124 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,59083907040 ,246637286 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,98840607030 ,415558906 , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,51100609083 , , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,25023883094 , , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,02623289093 , , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,93153771090 , , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,60841096082 , , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,04998246011 , , , , , , , , , , , );
+INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
+VALUES (NEXTVAL(id_profissional) ,61015984037 , , , , , , , , , , , );
 
 ********* 5 inserts ***********
 
