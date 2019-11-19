@@ -8,7 +8,16 @@ VALUES (NEXTVAL(id_profissional) , , , , , , , , , , , , );
 ********* 5 inserts ***********
 
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( , NEXTVAL(id_paciente), , , , , , , , , , , , );
+VALUES ( 1, NEXTVAL(id_paciente), 'Regina Esther Souza', 'F', 3212026294, 270123118, 13073078, 'Campinas', 'Vila Nova', 'Rua Pastor Alfredo Armando Carlstrom', 509, NULL, 1939199505);
+INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
+VALUES ( 2, NEXTVAL(id_paciente), 'Giovana Emanuelly dos Santos', 'F', 91241386811, 108442159, 13271443, 'Valinhos', 'Parque Nova Suíça', 'Rua dos Argentinos', 843, NULL, 1938279468);
+INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
+VALUES ( 3, NEXTVAL(id_paciente), 'Márcio Paulo Brito', 'M', 84383259804, 417896098, 13185780, 'Hortolândia', 'Jardim Conceição', , , , , );
+INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
+VALUES ( 4, NEXTVAL(id_paciente), , , , , , , , , , , , );
+INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
+VALUES ( 5, NEXTVAL(id_paciente), , , , , , , , , , , , );
+
 
 
 
