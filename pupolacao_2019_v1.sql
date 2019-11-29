@@ -44,15 +44,16 @@ VALUES (NEXTVAL(id_profissional) ,61015984037 , , , , , , , , , , , );
 ********* 5 inserts ***********
 
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 1, NEXTVAL(id_paciente), 'Regina Esther Souza', 'F', 3212026294, 270123118, 13073078, 'Campinas', 'Vila Nova', 'Rua Pastor Alfredo Armando Carlstrom', 509, NULL, 1939199505);
+VALUES ( 1, NEXTVAL(id_paciente), 'Regina Esther Souza', 'F', ‘3212026294’, ‘270123118’, ‘13073078’, 'Campinas', 'Vila Nova', 'Rua Pastor Alfredo Armando Carlstrom', 509, NULL, 1939199505);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 2, NEXTVAL(id_paciente), 'Giovana Emanuelly dos Santos', 'F', 91241386811, 108442159, 13271443, 'Valinhos', 'Parque Nova Suíça', 'Rua dos Argentinos', 843, NULL, 1938279468);
+VALUES ( 2, NEXTVAL(id_paciente), 'Giovana Emanuelly dos Santos', 'F', ‘91241386811’, ‘108442159’, ‘13271443’, 'Valinhos', 'Parque Nova Suíça', 'Rua dos Argentinos', 843, NULL, 1938279468);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 3, NEXTVAL(id_paciente), 'Márcio Paulo Brito', 'M', 84383259804, 417896098, 13185780, 'Hortolândia', 'Jardim Conceição', , , , , );
+VALUES ( 3, NEXTVAL(id_paciente), 'Márcio Paulo Brito', 'M', ‘84383259804’, ‘417896098’, ‘13185780’, 'Hortolândia', 'Jardim Conceição', ‘Avenida Artur Nogueira’, 576, NULL, 1126785442);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 4, NEXTVAL(id_paciente), , , , , , , , , , , , );
+VALUES ( 4, NEXTVAL(id_paciente), ‘Anthony Pedro Nascimento’, ‘M’, ‘09367853815’, ‘253988019’, ‘02351060’, ‘São Paulo’, ‘Parque Casa de Pedra’, ‘Rua Professor Albuquerque Prado’, ‘443’, NULL,  1139119744);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 5, NEXTVAL(id_paciente), , , , , , , , , , , , );
+VALUES ( 5, NEXTVAL(id_paciente), ‘Raquel Gabrielly Rezende’, ‘F’, ‘76700132819’, ‘439469739’, ‘13140297’, ‘Paulínia’, ‘Nova Paulínia’, ‘Rua Presidente Costa e Silva’, 977, NULL, ‘1935964158’);
+
 
 
 
@@ -60,26 +61,55 @@ VALUES ( 5, NEXTVAL(id_paciente), , , , , , , , , , , , );
 ********* 5 inserts ***********
 
 INSERT INTO SECRETARIA (id_profissional, id_secretaria)
-VALUES ( , NEXTVAL(id_secretaria));  
-  
+VALUES ( 1, NEXTVAL(id_secretaria));  
+INSERT INTO SECRETARIA (id_profissional, id_secretaria)
+VALUES ( 2, NEXTVAL(id_secretaria));  
+INSERT INTO SECRETARIA (id_profissional, id_secretaria)
+VALUES ( 3, NEXTVAL(id_secretaria));  
+INSERT INTO SECRETARIA (id_profissional, id_secretaria)
+VALUES ( 4, NEXTVAL(id_secretaria));  
+INSERT INTO SECRETARIA (id_profissional, id_secretaria)
+VALUES ( 5, NEXTVAL(id_secretaria));   
   
 ********* 5 inserts ***********
   
 INSERT INTO MEDICO (id_profissional, CRM)
-VALUES ( , );  
+VALUES ( 6, );
+INSERT INTO MEDICO (id_profissional, CRM)
+VALUES ( 7, );
+INSERT INTO MEDICO (id_profissional, CRM)
+VALUES ( 8, );
+INSERT INTO MEDICO (id_profissional, CRM)
+VALUES ( 9, );
+INSERT INTO MEDICO (id_profissional, CRM)
+VALUES ( 10, );
   
   
   
 ********* 5 inserts ***********
 INSERT INTO BIOMEDICO (id_profissional, CRBM)
-VALUES ( , );
-  
-  
-  
+VALUES ( 11, );
+INSERT INTO BIOMEDICO (id_profissional, CRBM)
+VALUES ( 12, );
+INSERT INTO BIOMEDICO (id_profissional, CRBM)
+VALUES ( 13, );
+INSERT INTO BIOMEDICO (id_profissional, CRBM)
+VALUES ( 14, );
+INSERT INTO BIOMEDICO (id_profissional, CRBM)
+VALUES ( 15, );
+
   
 ********* 5 inserts ***********
 INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
-VALUES ( ,NEXTVAL(id_bioinformata));
+VALUES ( 16, NEXTVAL(id_bioinformata));
+INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
+VALUES ( 17, NEXTVAL(id_bioinformata));
+INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
+VALUES ( 18, NEXTVAL(id_bioinformata));
+INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
+VALUES ( 19, NEXTVAL(id_bioinformata));
+INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
+VALUES ( 20, NEXTVAL(id_bioinformata));
   
 
 
