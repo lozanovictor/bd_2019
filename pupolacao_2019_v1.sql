@@ -1,15 +1,15 @@
 *********** 20 inserts ************
 
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
-VALUES (NEXTVAL(id_profissional) ,Joao da Silva ,M ,39949601002 ,292864462 , , , , , , , , );
+VALUES (CURVAL(id_profissional) , 'Joao da Silva' ,'M' ,'39949601002' ,'292864462' , , , , , , , , );
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
-VALUES (NEXTVAL(id_profissional) ,Ronaldo Santos ,M ,13487614073 ,190099938 , , , , , , , , );
+VALUES (NEXTVAL(id_profissional) ,'Ronaldo Santos' ,'M' ,'13487614073' ,'190099938' , , , , , , , , );
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
-VALUES (NEXTVAL(id_profissional) ,Amanda Ferreira ,F ,44467118063 ,488422218 , , , , , , , , );
+VALUES (NEXTVAL(id_profissional) ,'Amanda Ferreira' ,'F' ,'44467118063' ,'488422218' , , , , , , , , );
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
-VALUES (NEXTVAL(id_profissional) ,Marcelo Lima Bastos ,F ,64823938020 ,282207661 , , , , , , , , );
+VALUES (NEXTVAL(id_profissional) ,'Marcelo Lima Bastos' ,'F' ,'64823938020' ,'282207661' , , , , , , , , );
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
-VALUES (NEXTVAL(id_profissional) ,Pedro Ferraz ,M ,46244492072 ,164549638 , , , , , , , , );
+VALUES (NEXTVAL(id_profissional) ,'Pedro Ferraz' ,'M' ,'46244492072' ,'164549638', , , , , , , , );
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
 VALUES (NEXTVAL(id_profissional) ,85513726025 ,131847764 , , , , , , , , , , );
 INSERT INTO PROFISSIONAL (id_profissional, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone, cargo)
@@ -74,34 +74,34 @@ VALUES ( 5, NEXTVAL(id_secretaria));
 ********* 5 inserts ***********
   
 INSERT INTO MEDICO (id_profissional, CRM)
-VALUES ( 6, );
+VALUES ( 6, 50259);
 INSERT INTO MEDICO (id_profissional, CRM)
-VALUES ( 7, );
+VALUES ( 7, 97575);
 INSERT INTO MEDICO (id_profissional, CRM)
-VALUES ( 8, );
+VALUES ( 8, 45854);
 INSERT INTO MEDICO (id_profissional, CRM)
-VALUES ( 9, );
+VALUES ( 9, 36701);
 INSERT INTO MEDICO (id_profissional, CRM)
-VALUES ( 10, );
+VALUES ( 10, 26690);
   
   
   
 ********* 5 inserts ***********
 INSERT INTO BIOMEDICO (id_profissional, CRBM)
-VALUES ( 11, );
+VALUES ( 11, 93627);
 INSERT INTO BIOMEDICO (id_profissional, CRBM)
-VALUES ( 12, );
+VALUES ( 12, 17960);
 INSERT INTO BIOMEDICO (id_profissional, CRBM)
-VALUES ( 13, );
+VALUES ( 13, 30985);
 INSERT INTO BIOMEDICO (id_profissional, CRBM)
-VALUES ( 14, );
+VALUES ( 14, 1754);
 INSERT INTO BIOMEDICO (id_profissional, CRBM)
-VALUES ( 15, );
+VALUES ( 15, 18370);
 
   
 ********* 5 inserts ***********
 INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
-VALUES ( 16, NEXTVAL(id_bioinformata));
+VALUES ( 16, CURVAL(id_bioinformata));
 INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
 VALUES ( 17, NEXTVAL(id_bioinformata));
 INSERT INTO BIOINFORMATA (id_profissional, id_bioinformata)
@@ -116,18 +116,42 @@ VALUES ( 20, NEXTVAL(id_bioinformata));
 ********* 5 inserts ***********
 
 INSERT INTO EXAME (id_paciente, CRBM, id_secretaria, data_exame, cod_procedimento, tipo)
-VALUES ( , , , , NEXTVAL(cod_procedimento), );
+VALUES ( 1, 93627, 1, current_timestamp, CURVAL(cod_procedimento), 'PCR');
+INSERT INTO EXAME (id_paciente, CRBM, id_secretaria, data_exame, cod_procedimento, tipo)
+VALUES ( 2, 30985, 2, current_timestamp, NEXTVAL(cod_procedimento), 'HLA-MAPPER');
+INSERT INTO EXAME (id_paciente, CRBM, id_secretaria, data_exame, cod_procedimento, tipo)
+VALUES ( 3, 93627, 3, current_timestamp, NEXTVAL(cod_procedimento), 'HEMOGRAMA');
+INSERT INTO EXAME (id_paciente, CRBM, id_secretaria, data_exame, cod_procedimento, tipo)
+VALUES ( 4, 30985, 4, current_timestamp, NEXTVAL(cod_procedimento), 'ESPERMOGRAMA');
+INSERT INTO EXAME (id_paciente, CRBM, id_secretaria, data_exame, cod_procedimento, tipo)
+VALUES ( 5, 18370, 5, current_timestamp, NEXTVAL(cod_procedimento), 'PCR');
   
 
 
 ********* 5 inserts ***********  
 INSERT INTO EQUIPAMENTO (id_equipamento, nome)
-VALUES (NEXTVAL(id_equipamento), );
-  
+VALUES (CURVAL(id_equipamento), 'Sequenciador Ilumina MiSeq');
+INSERT INTO EQUIPAMENTO (id_equipamento, nome)
+VALUES (NEXTVAL(id_equipamento), 'ABI 3730xl');
+INSERT INTO EQUIPAMENTO (id_equipamento, nome)
+VALUES (NEXTVAL(id_equipamento), 'Roche/454 FLX');
+INSERT INTO EQUIPAMENTO (id_equipamento, nome)
+VALUES (NEXTVAL(id_equipamento), 'Ilumina/Solexa GA');
+INSERT INTO EQUIPAMENTO (id_equipamento, nome)
+VALUES (NEXTVAL(id_equipamento), 'ABI SOLiD');
+
 
 ********* 5 inserts ***********  
 INSERT INTO AMOSTRA (cod_procedimento, cod_amostra, tipo)
-VALUES ( , NEXTVAL(cod_amostra), );
+VALUES ( 1, CURVAL(cod_amostra), 'Sangue');
+INSERT INTO AMOSTRA (cod_procedimento, cod_amostra, tipo)
+VALUES ( 2, NEXTVAL(cod_amostra), 'Medula ossea');
+INSERT INTO AMOSTRA (cod_procedimento, cod_amostra, tipo)
+VALUES ( 3, NEXTVAL(cod_amostra), 'Globulos brancos');
+INSERT INTO AMOSTRA (cod_procedimento, cod_amostra, tipo)
+VALUES ( 4, NEXTVAL(cod_amostra), 'Esperma');
+INSERT INTO AMOSTRA (cod_procedimento, cod_amostra, tipo)
+VALUES ( 5, NEXTVAL(cod_amostra), 'Sangue');
 
 
 
