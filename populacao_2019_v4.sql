@@ -44,15 +44,15 @@ VALUES (NEXTVAL('id_profissional') ,61015984037 , , , , , , , , , , , );
 ********* 5 inserts ***********
 
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 1, NEXTVAL('id_paciente'), 'Regina Esther Souza', 'F', ‘3212026294’, ‘270123118’, ‘13073078’, 'Campinas', 'Vila Nova', 'Rua Pastor Alfredo Armando Carlstrom', 509, NULL, 1939199505);
+VALUES ( 1, NEXTVAL('id_paciente'), 'Regina Esther Souza', 'F', '3212026294', '270123118', '13073078', 'Campinas', 'Vila Nova', 'Rua Pastor Alfredo Armando Carlstrom', 509, NULL, 1939199505);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 2, NEXTVAL('id_paciente'), 'Giovana Emanuelly dos Santos', 'F', ‘91241386811’, ‘108442159’, ‘13271443’, 'Valinhos', 'Parque Nova Suica', 'Rua dos Argentinos', 843, NULL, 1938279468);
+VALUES ( 2, NEXTVAL('id_paciente'), 'Giovana Emanuelly dos Santos', 'F', '91241386811', '108442159', '13271443', 'Valinhos', 'Parque Nova Suica', 'Rua dos Argentinos', 843, NULL, 1938279468);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 3, NEXTVAL('id_paciente'), 'Marcio Paulo Brito', 'M', ‘84383259804’, ‘417896098’, ‘13185780’, 'Hortolândia', 'Jardim Conceicao', ‘Avenida Artur Nogueira’, 576, NULL, 1126785442);
+VALUES ( 3, NEXTVAL('id_paciente'), 'Marcio Paulo Brito', 'M', '84383259804', '417896098', '13185780', 'Hortolandia', 'Jardim Conceicao', 'Avenida Artur Nogueira', 576, NULL, 1126785442);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 4, NEXTVAL('id_paciente'), ‘Anthony Pedro Nascimento’, ‘M’, ‘09367853815’, ‘253988019’, ‘02351060’, ‘São Paulo’, ‘Parque Casa de Pedra’, ‘Rua Professor Albuquerque Prado’, ‘443’, NULL,  1139119744);
+VALUES ( 4, NEXTVAL('id_paciente'), 'Anthony Pedro Nascimento', 'M', '09367853815', '253988019', '02351060', 'Sao Paulo', 'Parque Casa de Pedra', 'Rua Professor Albuquerque Prado', '443', NULL,  1139119744);
 INSERT INTO PACIENTE (id_secretaria, id_paciente, nome, sexo, CPF, RG, CEP, cidade, bairro, rua, numero, complemento, telefone)
-VALUES ( 5, NEXTVAL('id_paciente'), ‘Raquel Gabrielly Rezende’, ‘F’, ‘76700132819’, ‘439469739’, ‘13140297’, ‘Paulinia’, ‘Nova Paulinia’, ‘Rua Presidente Costa e Silva’, 977, NULL, ‘1935964158’);
+VALUES ( 5, NEXTVAL('id_paciente'), 'Raquel Gabrielly Rezende', 'F', '76700132819', '439469739', '13140297', 'Paulinia', 'Nova Paulinia', 'Rua Presidente Costa e Silva', 977, NULL, 1935964158);
 
 
 
