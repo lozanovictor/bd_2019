@@ -1,0 +1,19 @@
+SELECT * FROM PACIENTE;
+
+SELECT id_paciente, nome, CPF FROM PACIENTE;
+
+SELECT nome, cargo FROM PROFISSIONAL;
+
+SELECT * 
+FROM PROFISSIONAL, SECRETARIA
+WHERE  PROFISSIONAL.id_profissional = SECRETARIA.id_profissional;
+
+SELECT PACIENTE.nome, PROFISSIONAL.nome, PROFISSIONAL.id_profissional, SECRETARIA.id_profissional
+FROM PACIENTE, PROFISSIONAL, SECRETARIA
+WHERE PROFISSIONAL.id_profissional = SECRETARIA.id_profissional;
+
+
+CREATE VISION paciente_cadastrado_secretaria (nome, PACIENTE, nome, id_profissional, PROFISSIONAL, id_profissional, SECRETRIA)
+AS SELECT PACIENTE.nome, PROFISSIONAL.nome, PROFISSIONAL.id_profissional, SECRETARIA.id_profissional
+FROM PACIENTE, PROFISSIONAL, SECRETARIA
+WHERE PROFISSIONAL.id_profissional = SECRETARIA.id_profissional;
