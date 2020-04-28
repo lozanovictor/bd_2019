@@ -16,5 +16,9 @@ CREATE TABLE LAUDO (
     FOREIGN KEY (id_equipamento) REFERENCES EQUIPAMENTO (id_equipamento),
     FOREIGN KEY (cod_procedimento) REFERENCES EXAME (cod_procedimento));
     
+CREATE UNIQUE INDEX CONCURRENTLY unique_paciente_cpf 
+ON PACIENTE (CPF);
+                                                     
 ALTER TABLE PACIENTE
-    ALTER COLUMN cpf SET UNIQUE;
+    ADD CONSTRAINT unique_peciente_cpf 
+    UNIQUE USING INDEX unique_paciente_cpf;
