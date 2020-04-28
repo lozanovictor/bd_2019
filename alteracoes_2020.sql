@@ -9,6 +9,7 @@ CREATE TABLE LAUDO (
     cod_amostra INTEGER NOT NULL,
     CRBM INTEGER NOT NULL,
     id_equipamento INTEGER NOT NULL,
+    cod_procedimento INTEGER NOT NULL,
     PRIMARY KEY (id_laudo),
     FOREIGN KEY (cod_amostra) REFERENCES AMOSTRA (cod_amostra),
     FOREIGN KEY (CRBM) REFERENCES BIOMEDICO (CRBM),
