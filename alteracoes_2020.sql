@@ -12,8 +12,8 @@ CREATE TABLE LAUDO (
     PRIMARY KEY (id_laudo),
     FOREIGN KEY (cod_amostra) REFERENCES AMOSTRA (cod_amostra),
     FOREIGN KEY (CRBM) REFERENCES BIOMEDICO (CRBM),
-    FOREIGN KEY (id_equipamento) REFERENCES EXAME_EQUIPAMENTO (id_equipamento),
-    FOREIGN KEY (cod_procedimento) REFERENCES EXAME_EQUIPAMENTO (cod_procedimento));
+    FOREIGN KEY (id_equipamento) REFERENCES EQUIPAMENTO (id_equipamento),
+    FOREIGN KEY (cod_procedimento) REFERENCES EXAME (cod_procedimento));
     
 ALTER TABLE PACIENTE
     ALTER COLUMN cpf SET UNIQUE;
