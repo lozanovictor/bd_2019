@@ -22,3 +22,7 @@ ON PACIENTE (CPF);
 ALTER TABLE PACIENTE
     ADD CONSTRAINT unique_peciente_cpf 
     UNIQUE USING INDEX unique_paciente_cpf;
+                                                     
+ALTER TABLE SECRETARIA
+    ADD e_estagiaria BOOLEAN,                                                 
+    ADD pode_efetivar BOOLEAN;
