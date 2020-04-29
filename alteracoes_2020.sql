@@ -26,3 +26,7 @@ ALTER TABLE PACIENTE
 ALTER TABLE SECRETARIA
     ADD e_estagiaria BOOLEAN,                                                 
     ADD pode_efetivar BOOLEAN;
+
+ALTER TABLE LAUDO
+    ADD id_paciente INTEGER NOT NULL,
+    ADD FOREIGN KEY (id_paciente) REFERENCES PACIENTE (id_paciente);                                              
