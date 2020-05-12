@@ -30,3 +30,8 @@ ALTER TABLE SECRETARIA
 ALTER TABLE LAUDO
     ADD id_paciente INTEGER NOT NULL,
     ADD FOREIGN KEY (id_paciente) REFERENCES PACIENTE (id_paciente);                                              
+
+                                                     
+ALTER TABLE EQUIPAMENTO
+DROP data_prox_manutencao,
+ADD fazer_manutencao BOOLEAN;
