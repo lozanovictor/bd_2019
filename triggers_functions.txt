@@ -1,0 +1,80 @@
+
+CREATE TRIGGER estagiaria_secretaria
+BEFORE UPDATE
+ON PACIENTE FOR EACH ROW
+EXECUTE PROCEDURE secretaria_estagiaria;
+
+
+CREATE OR REPLACE FUNCTION secretaria_estagiaria (secretaria.id_secretaria%TYPE,
+                                           paciente.id_pacientel%TYPE)
+RETURNS BOOLEAN
+AS
+'
+    DECLARE
+        
+        
+    BEGIN
+        IF (SELECT COUNT(id_secretaria) FROM PACIENTE
+        WHERE e_estagiaria = TRUE AND id_secretaria = (VARIAVEL QUE VEIO DE PARAMETRO)) >=200 THEN
+            UPDATE SECRETARIA
+            SET pode_efetivar = TRUE,
+            WHERE id_secretaria = VARIAVEL;
+        ELSE
+            RETURN NULL;
+        END IF;
+        
+        RAISE  ''nome: %'', nome;
+        RAISE  ''cargo atual: %'', cargo;
+        RETURN ''nome'';
+    END;
+'
+Language'plpgsql'
+
+
+
+
+
+
+
+CREATE TRIGGER manutencao_equipamento
+BEFORE INSERT
+ON EXAME FOR EACH ROW
+EXECUTE PROCEDURE equipamento_manutencao;
+
+
+CREATE OR REPLACE FUNCTION equipamento_manutencao (exame.cod_procedimento%TYPE,
+                                           exame_equipamento.id_equipamento%TYPE, equipamento.id_equipamento%TYPE)
+RETURNS 
+AS
+'
+    DECLARE
+        
+        
+    BEGIN
+        IF (SELECT id_equipamento FROM EQUIPAMENTO WHERE id_equipamento = (VARIAVEL QUE VEIO DE PARAMETRO) AND equip_compra => 5 YEARS) = TRUE THEN
+            IF (SELECT id_equipamento FROM EQUIPAMENTO WHERE id_equipamento = (VARIAVEL DO PARAMETRO) AND equip_compra=> 5 YEARS AND ultima_manutencao <= 1 YEAR) = TRUE THEN
+            RETURN NULL;
+        ELSE
+            UPDATE EQUIPAMENTO
+            SET fazer_manutencao = TRUE,
+            WHERE id_equipamento = PARAMETRO;
+        END IF;
+ 
+    END;
+'
+Language'plpgsql'
+
+
+CREATE FUNCTION paciente_exames (paciente.id_paciente%TYPE, exame.cod_procedimento%TYPE)
+RETURNS tipo_retorno  
+AS' 
+    DECLARE
+    variável tipo_variável;...
+    BEGIN
+        SELECT paciente.id_paciente, paciente.nome, exame.id_paciente, COUNT(exame.cod_procedimento), exame.tipo FROM PACIENTE, EXAME
+        WHERE paciente.id_paciente = exame.id_paciente;
+    RETURN valor_retorno;
+    
+    END;  '  
+    
+LANGUAGE 'plpgsql';
